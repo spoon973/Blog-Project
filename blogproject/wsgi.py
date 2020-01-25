@@ -11,6 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blogproject.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blogproject.settings.production')
 
+# 线上环境运行Gunicorn加载的配置项
 application = get_wsgi_application()

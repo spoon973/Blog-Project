@@ -5,7 +5,9 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blogproject.settings')
+    # 如果当前环境中DJANGO_SETTINGS_MODULE的值没有被设置，就将其设置为blogproject.settings
+    # 所以当我们使用python manage.py 执行命令的时候，django默认为我们使用了settings.py这个配置
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blogproject.settings.local')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
