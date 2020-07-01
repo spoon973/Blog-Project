@@ -8,6 +8,8 @@ fabric = "*"
 
 [packages]
 gunicorn = "*"
+django = "==2.2.3"
+markdown = "*"
 
 [requires]
 python_version = "3.6"
